@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions 
+targetNamespace="http://glite.org/wsdl/services/trustmanager-test" 
+xmlns:apachesoap="http://xml.apache.org/xml-soap" 
+xmlns:impl="http://glite.org/wsdl/services/trustmanager-test" 
+xmlns:intf="http://glite.org/wsdl/services/trustmanager-test" 
+xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Sep 24, 2010 (01:43:17 UTC)-->
+
+   <wsdl:message name="getAttributesRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getAttributesResponse">
+
+      <wsdl:part name="getAttributesReturn" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="EchoService">
+
+      <wsdl:operation name="getAttributes">
+
+         <wsdl:input message="impl:getAttributesRequest" name="getAttributesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getAttributesResponse" name="getAttributesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="EchoServiceSoapBinding" type="impl:EchoService">
+
+      <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getAttributes">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAttributesRequest">
+
+            <wsdlsoap:body namespace="http://glite.org/wsdl/services/org.glite.security.trustmanager.axis" use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAttributesResponse">
+
+            <wsdlsoap:body namespace="http://glite.org/wsdl/services/org.glite.security.trustmanager.axis" use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="EchoServiceService">
+
+      <wsdl:port binding="impl:EchoServiceSoapBinding" name="EchoService">
+
+         <wsdlsoap:address location="https://localhost:8443/org.glite.security.trustmanager.axis/EchoService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
