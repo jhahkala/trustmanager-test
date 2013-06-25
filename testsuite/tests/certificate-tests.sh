@@ -128,7 +128,7 @@ myecho "Testing with normal sha384 certificate"
 test_cert $certdir/trusted-certs/trusted_clientsha384_nopass.priv $certdir/trusted-certs/trusted_clientsha384.cert $SUCCESS 
 myecho "Test passed"
 myecho "Testing with normal sha512 certificate"
-test_cert $certdir/trusted-certs/trusted_client_nopasssha512.priv $certdir/trusted-certs/trusted_clientsha512.cert $SUCCESS 
+test_cert $certdir/trusted-certs/trusted_clientsha512_nopass.priv $certdir/trusted-certs/trusted_clientsha512.cert $SUCCESS 
 myecho "Test passed"
 myecho "Testing with normal proxy certificate"
 test_cert $certdir/trusted-certs/trusted_client.proxy_nopass.priv $certdir/trusted-certs/trusted_client.proxy.cert $SUCCESS $certdir/trusted-certs/trusted_client.cert
