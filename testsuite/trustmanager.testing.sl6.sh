@@ -33,7 +33,7 @@ wget http://repository.egi.eu/sw/production/cas/1/current/repo-files/EGI-trustan
 
 cd
 
-yum install yum-priorities yum-protectbase
+yum install -y yum-priorities yum-protectbase
 
 rpm --import http://emisoft.web.cern.ch/emisoft/dist/EMI/2/RPM-GPG-KEY-emi
 rpm -ivh http://emisoft.web.cern.ch/emisoft/dist/EMI/2/sl6/x86_64/base/emi-release-2.0.0-1.sl6.noarch.rpm
