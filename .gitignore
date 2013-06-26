@@ -1,6 +1,12 @@
-*.class
-
-# Package Files #
-*.jar
-*.war
-*.ear
+target/
+*~
+*.log
+.classpath
+.project
+*.ipr
+*.iws
+*.iml
+.settings/
+meta-storage.dat
+users-storage.dat
+hydra-storage.dat
